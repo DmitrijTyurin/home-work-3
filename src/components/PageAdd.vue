@@ -50,8 +50,8 @@
     import {ref} from "vue";
     
     const productDatas = defineModel()
-    const pageView = defineModel('pageView')
     const pageAddView = defineModel('pageAddView')
+
 
     const prodName = ref('')
     const prodPrice = ref(null)
@@ -75,7 +75,6 @@
             })
         }
         pageAddView.value = false
-        pageView.value = true
     }
 </script>
 

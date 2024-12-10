@@ -6,12 +6,7 @@
         v-model:pageView="pageView"
         v-model:buyProduct="buyProduct"
         v-model:filter="filter"
-        v-model:pageAddView="pageAddView"
         v-model:pageBuyView="pageBuyView"/>
-  <PageAdd v-if="pageAddView"
-           v-model="productDatas"
-           v-model:pageView="pageView"
-           v-model:pageAddView="pageAddView"/>
   <PageBuy v-if="pageBuyView"
            v-model="productDatas"
            v-model:pageView="pageView"
@@ -24,11 +19,9 @@
   import axios from "axios";
   import {onMounted, ref, computed} from "vue";
   import Page from './Page.vue';
-  import PageAdd from "./PageAdd.vue";
   import PageBuy from "./PageBuy.vue";
 
   const pageView = ref(true)
-  const pageAddView = ref(false)
   const pageBuyView = ref(false)
   const buyProduct = ref()
 

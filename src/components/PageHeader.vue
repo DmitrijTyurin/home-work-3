@@ -4,7 +4,7 @@
         <div class="leftb"><slot>Цена от: </slot><input type="number" class="lefti" v-model="sPriceFrom" /></div>
         <div class="leftb"><slot>Цена до: </slot><input type="number" class="lefti" v-model="sPriceTo" /></div>
         <button class="leftb" @click="filter = search()">Поиск</button>
-        <button class="leftb" @click="pageView = false; pageAddView = true">Добавить</button>
+        <button class="leftb" @click="pageAddView = true">Добавить</button>
     </label>
 </template>
 
@@ -12,7 +12,6 @@
     import {ref} from "vue";
 
     const filter = defineModel('filter')
-    const pageView = defineModel('pageView')
     const pageAddView = defineModel('pageAddView')
 
     const sName = ref('')
